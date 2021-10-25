@@ -2,7 +2,7 @@ body{
     margin: 0;
     padding: 0;
     font-size: 16pt; /* test for this! Make all sizes em or rem */
-    font-family: 'Alegreya Sana SC', serif;
+    font-family: 'Alegreya Sans SC', serif;
     background-color: #f1f1f1;
     background-image: url("../images/concrete_seamless.png");
     
@@ -12,8 +12,10 @@ body{
     background: #fff;
     border-bottom: 3px solid #50C7C7;
     display: flex;
-    flex-flow: row wrap;
-    justify-content: center;
+    flex-flow: column;
+    
+    /* justify-content: center; */
+    align-items: center;
   }
   
   h1{
@@ -53,9 +55,12 @@ body{
     border: 2px solid black;
   }
 
+  
 
   .nav_item a{
     padding: 10px;
+    /* display: flex; */
+    
   }
   
   .nav_item a:hover, a:focus{
