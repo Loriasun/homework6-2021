@@ -72,11 +72,12 @@ body{
   .pricing{
     min-height: 475px;
     display: flex;
-    flex-flow: column ;
+    flex-flow: row wrap;
     align-items: center;
     justify-content: center;
     width: 90%;
   }
+  /* parent class for card, card_big */
 
 
   .card {
@@ -84,7 +85,7 @@ body{
     background: #fff;
     border-radius: 7px;
     padding: 0 0 25px 0;
-    /* flex-basis: 450px; */
+    flex-basis: 450px;
 
   }
   
@@ -129,7 +130,7 @@ body{
   .card_big{
     -webkit-transform: initial;
             transform: initial;
-     /* flex-basis: auto; */
+     /* flex-basis: 450px; */
      
   }
 /* solid 10px border with a color of 
@@ -138,13 +139,14 @@ body{
 
   .gallery{
     min-height: 600px;
-    border: 10px solid #50C7C7;
+    border:  solid 10px #50C7C7;
     margin: 10px;
-    width: 300px;
+    /* width: 300px; */
     display: flex;
     flex-flow: row wrap;
-    /* justify-content: space-around; */
-    justify-content:space-around;
+    flex-basis: 300px;
+    justify-content: space-around;
+    /* justify-content:center; */
     align-items: center;
   }
   
