@@ -14,7 +14,6 @@ body{
     display: flex;
     flex-flow: column;
     
-    /* justify-content: center; */
     align-items: center;
   }
   
@@ -59,7 +58,7 @@ body{
 
   .nav_item a{
     padding: 10px;
-    /* display: flex; */
+    color:#000fff;
     
   }
   
@@ -72,19 +71,37 @@ body{
 
   .pricing{
     min-height: 475px;
+    display: flex;
+    flex-flow: column ;
+    align-items: center;
+    justify-content: center;
   }
+
 
   .card {
     margin: 12px;
     background: #fff;
     border-radius: 7px;
     padding: 0 0 25px 0;
+    /* vertical-align: middle; */
+    /* display: flex; */
+
+  }
   
+  .card header{
+    /* background: #288088; */
+    background: #288088;
+    border:  2px solid #45ADAD;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    border-top-left-radius: 7px;
+    border-top-right-radius:7px;
   }
 
   .card > ul{
     list-style: none;
     padding-left: 5px;
+    /* background: #288088 */
   }
   
   .card > ul li {
@@ -107,6 +124,7 @@ body{
   .card h3{
     font-size: 4em;
     color: white;
+    
     text-align: center;
   }
   
