@@ -142,8 +142,10 @@ body{
     margin: 10px;
     width: 300px;
     display: flex;
-    flex-flow: column;
-    justify-content: space-around;
+    flex-flow: row wrap;
+    /* justify-content: space-around; */
+    justify-content:space-around;
+    align-items: center;
   }
   
   footer{
