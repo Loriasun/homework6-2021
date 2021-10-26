@@ -13,7 +13,6 @@ body{
     border-bottom: 3px solid #50C7C7;
     display: flex;
     flex-flow: column;
-    
     align-items: center;
   }
   
@@ -73,9 +72,9 @@ body{
     min-height: 475px;
     display: flex;
     flex-flow: row wrap;
-    align-items: center;
+    /* align-items: center; */
     justify-content: center;
-    width: 90%;
+    /* width: 90%; */
   }
   /* parent class for card, card_big */
 
@@ -130,26 +129,29 @@ body{
   .card_big{
     -webkit-transform: initial;
             transform: initial;
-     /* flex-basis: 450px; */
-     
+    
   }
+
+
 /* solid 10px border with a color of 
   #50C7C7, 10px margin on all four sides 
   and a width of 300px.  */
 
   .gallery{
     min-height: 600px;
-    border:  solid 10px #50C7C7;
-    margin: 10px;
-    /* width: 300px; */
     display: flex;
     flex-flow: row wrap;
-    flex-basis: 300px;
-    justify-content: space-around;
-    /* justify-content:center; */
+    /* justify-content: space-around; */
+    justify-content:center;
     align-items: center;
   }
-  
+
+  #image1, #image2, #image3, #image4, #image5{
+    border:  solid 10px #50C7C7;
+    margin: 10px;
+    width: 300px;
+  }
+
   footer{
     background-color: black;
     color: white;
@@ -157,11 +159,89 @@ body{
     text-align: center;
   }
 
+/* animation */
+@keyframes logo{
+  from {width: 50px;
+        opacity: 0;}
+  to{width: 425px;
+    opacity: 1;}
+}
+
+#logo{
+  animation-name: logo;
+  animation-duration: 5s;
+  animation-iteration-count: 1;
+}
+
+/* @media (prefers-reduced-motions){
+  logo{
+    animation-name: dissolve;
+  }
+} */
+
+@media screen and (prefers-reduced-motion){
+  #logo{
+    animation-name: none;
+  }
+}
+
+  /* for big screens */
   @media screen and (min-width: 850px){
     .card_big{
         -webkit-transform: scaleY(1.1);
         transform: scaleY(1.1);
         z-index: -99;
   }
+
+  header{
+    background: #fff;
+    border-bottom: 3px solid #50C7C7;
+    display: flex;
+    flex-flow: row;
+    /* align-items: center; */
+    justify-content: space-between;
+  }
+  .nav_item {
+    display: inline;
+  }
+
+  .card {
+    margin: 12px;
+    background: #fff;
+    border-radius: 7px;
+    padding: 0 0 25px 0;
+    flex-basis: 250px;
+
+  }
+
 }
+
+
+/* print view */
+@media print{
+  body{
+    background-image: none;
+  } 
+
+  .nav_links{
+    display: flex;
+    flex-flow: row;
+    justify-content: space-between;
+  }
+  .pricing{
+    display: flex;
+    flex-flow: row;
+    align-items: baseline;
+  }
+
+
+  .card {
+    border:solid 2px #45ADDD;
+    flex-basis: 250px;
+
+  }
   
+  .gallery{
+    visibility: hidden;
+  }
+}
