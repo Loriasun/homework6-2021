@@ -203,11 +203,7 @@ body{
     flex-basis: 250px;
   }
 
-  /* testing for adding emoji */
-  .card > ul li:before{
-    content: "reference";
-  }
-
+  
 } /* end big screen view*/
 
 
@@ -237,9 +233,14 @@ body{
     border:solid 2px #45ADDD;
     flex-basis: 250px;
   }
-  .card > ul li:nth-child(1) ::before{
-    content: "reference";
-  }
+ 
+  /* adding thumbs up */
+ .card > ul>li:nth-child(odd):before{
+  content: "👍 ";
+}
+.card > ul>li:nth-child(even):after{
+  content: "👍 ";
+}
   
   .gallery,#gallery{
     display: none;
