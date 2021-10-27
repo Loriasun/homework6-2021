@@ -131,7 +131,7 @@ body{
   .pricing{
     display: flex;
     flex-flow:row ;
-    align-items: bottom;
+    align-items: flex-end;
   }
 
   .card {
