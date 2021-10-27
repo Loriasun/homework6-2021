@@ -11,8 +11,11 @@ body{
     align-items: center;
   }
 
-  .nav_links a{
+  .nav_links a:visited{
+    /* display: flex; */
     color:#000fff;
+    display: flex;
+    flex-direction: row;
   }
  
   .pricing{
@@ -24,6 +27,7 @@ body{
   }
   /* parent class for card, card_big */
   .card{
+    /* display: flex; */
     flex-basis: 450px;
   }
   .card header{
@@ -72,24 +76,32 @@ body{
 
 
 @media screen and (prefers-reduced-motion){
+  html{
+    scroll-behavior: auto; /* Removes scroll animation */
+}
+  
   #logo{
     animation-name: none;
+  }
+  header{
+    background-attachment: initial;
+  }
+
+  .skip a{
+    -webkit-transition: initial; /* sets to default setting */
+    transition: initial; /* sets to default setting */
   }
 }
 
   /* for big screens */
   @media screen and (min-width: 850px){
   body > header{
-    /* background: #fff;
-    border-bottom: 3px solid #50C7C7; */
     display: flex;
     flex-flow: row;
     justify-content: space-between;
     position:sticky; 
     top: 0;
-    /* position: fixed;
-    top: 0%;
-    width: 100%; */
+    width: 100%; 
   }
 
   /* .nav_item {
@@ -97,7 +109,8 @@ body{
   } */
 
   .nav_links{
-     display: inline-flex;
+    display: flex;
+    flex-direction: row;
   }
 
   .card {
@@ -109,6 +122,9 @@ body{
     /* z-index: -99; */
   }
 
+  .pricing{
+    align-items: center;
+  }
   
 } /* end big screen view*/
 
