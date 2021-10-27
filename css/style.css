@@ -11,19 +11,21 @@ body{
     align-items: center;
   }
 
-  .nav_item a{
+  .nav_links a{
     color:#000fff;
   }
  
   .pricing{
     display: flex;
     flex-flow: row wrap;
-    /* align-items: center; */
+    align-items: center;
     justify-content: center;
-    /* width: 90%; */
+    
   }
   /* parent class for card, card_big */
-
+  .card{
+    flex-basis: 450px;
+  }
   .card header{
     background: #288088;
     border:  2px solid #45ADAD;
@@ -77,7 +79,7 @@ body{
 
   /* for big screens */
   @media screen and (min-width: 850px){
-  header{
+  body > header{
     /* background: #fff;
     border-bottom: 3px solid #50C7C7; */
     display: flex;
@@ -104,7 +106,7 @@ body{
     border-radius: 7px;
     padding: 0 0 25px 0;
     flex-basis: 250px;
-    z-index: -99;
+    /* z-index: -99; */
   }
 
   
