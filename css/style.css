@@ -10,6 +10,10 @@ body{
     flex-flow: column;
     align-items: center;
   }
+  .nav_links{
+    display: flex;
+    flex-direction: column;
+  }
 
   .nav_links a:visited{
     /* display: flex; */
