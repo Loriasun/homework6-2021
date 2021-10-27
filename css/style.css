@@ -78,15 +78,21 @@ body{
   /* for big screens */
   @media screen and (min-width: 850px){
   header{
-    background: #fff;
-    border-bottom: 3px solid #50C7C7;
+    /* background: #fff;
+    border-bottom: 3px solid #50C7C7; */
     display: flex;
     flex-flow: row;
     justify-content: space-between;
+    /* position:fixed; */
+   
   }
-  
-  .nav_item {
+
+  /* .nav_item {
     display: inline;
+  } */
+
+  .nav_links{
+     display: inline-flex;
   }
 
   .card {
